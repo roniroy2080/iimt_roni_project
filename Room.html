@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar</title>
+    <link rel="stylesheet" href="Room.css" />
+    <link rel="stylesheet" href="Toast.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <button
+        id="close_btn"
+        style="
+          font-weight: 900;
+          border-radius: 50%;
+          height: 2.5rem;
+          width: 2.5rem;
+          position: absolute;
+          right: 1rem;
+          font-size: 1rem;
+        "
+        onclick="closeNav()"
+      >
+        &#8592;
+      </button>
+
+      <!-- <button>Leave Room</button> -->
+      <button
+        class="send-button"
+        style="background: red; margin: 0.75rem"
+        id="leave_room_btn"
+      >
+        LEAVE ROOM
+      </button>
+      <!-- <button class="send-button" style="background: rgb(0, 251, 255);margin: 0.75rem;color: black;" id="room_details"> ROOM DETAILS</button> -->
+
+      <div class="online" style="width: 220px; overflow-x: hidden">
+        <!-- ======person1========= -->
+       
+
+        <!-- ======person1========= -->
+        <!-- <div style="margin-left: 0.75rem;">
+      <h4>Rakesh Kumar</h4>
+      <div style="display: flex;align-items: center;text-align: center;gap: 1rem;margin-top: -1.75rem;">
+        <p style="color: green;"> Online  </p>
+        <div style="height: 10px;width: 10px;border-radius: 50%;background: rgb(66, 228, 2);"></div></div>
+    </div> -->
+
+        <!-- ======person1========= -->
+        <!-- <div style="margin-left: 0.75rem;">
+      <h4 style="text-wrap: break-word;padding-right: 1rem;">Rakeshaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbb Kumar</h4>
+      <div style="display: flex;align-items: center;text-align: center;gap: 1rem;margin-top: -1.75rem;">
+        <p style="color: green;"> Online  </p>
+        <div style="height: 10px;width: 10px;border-radius: 50%;background: rgb(66, 228, 2);"></div></div>
+    </div> -->
+      </div>
+    </div>
+
+    <div id="main">
+      <button class="open-btn" onclick="openNav()" id="open_nav">☰ JOIN</button>
+
+      <div class="chat-container">
+        <div class="chat-header"> Messages</div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- <div class="message">
+            <span class="user">Jane Doe:</span>
+            <div class="content">Hi! I'm doing well, thank you.</div>
+            <span class="timestamp">12:32 PM</span>
+          </div> -->
+
+          <!-- Add more messages as needed -->
+        </div>
+        <div class="chat-input">
+          <input
+            type="text"
+            class="input-field"
+            id="messageInput"
+            placeholder="Type your message..."
+          />
+          <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========Toast========= -->
+    <div id="snackbar"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.2/socket.io.js"></script>
+    <script src="Toast.js"></script>
+
+    <script src="Room.js"></script>
+  </body>
+</html>
