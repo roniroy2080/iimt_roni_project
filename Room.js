@@ -81,7 +81,7 @@ function messagee(data) {
   var message = document.createElement("div");
   message.className = "message";
   message.innerHTML =
-    '<span class="user"></span><div class="content">' +
+    '<span class="user">Others : </span><div class="content">' +
     data +
     '</div><span class="timestamp">' +
     getCurrentTime() +
