@@ -81,7 +81,7 @@ function messagee(data) {
   var message = document.createElement("div");
   message.className = "message";
   message.innerHTML =
-    '<span class="user">Others : </span><div class="content">' +
+    '<span class="user">Message : </span><div class="content">' +
     data +
     '</div><span class="timestamp">' +
     getCurrentTime() +
@@ -146,7 +146,7 @@ function sendMessage() {
     var message = document.createElement("div");
     message.className = "message";
     message.innerHTML =
-      '<span class="user">You:</span><div class="content">' +
+      '<span class="user">Message : </span><div class="content">' +
       messageInput.value +
       '</div><span class="timestamp">' +
       getCurrentTime() +
@@ -198,4 +198,5 @@ socket.on("disconnected", function () {
 socket.off("disconnect");
 socket.off("server-message");
 socket.off("server-update");
+
 
