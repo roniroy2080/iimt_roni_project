@@ -85,7 +85,7 @@ room_joining_modal_btn.addEventListener("click", () => {
       !Successfully_joined_room_by_local_user ||
       i_joined_success_return_from_socket == false
     ) {
-      socket = io("https://shy-tree-08264.pktriot.xyz");
+      socket = io("https://iimtback.vercel.app");
       document.getElementById("room__join_modal").value = null;
       document.getElementById("room__password_join_modal").value = null;
       OTHERS_ROOM_ID = room_id + room_password;
@@ -116,7 +116,7 @@ room_joined_by_own_id_pass_btn.onclick = () => {
     !Successfully_joined_room_by_local_user ||
     i_joined_success_return_from_socket == false
   ) {
-    socket = io("https://shy-tree-08264.pktriot.xyz");
+    socket = io("https://iimtback.vercel.app");
     document.getElementById("room__join_modal").value = null;
     document.getElementById("room__password_join_modal").value = null;
 
@@ -608,4 +608,5 @@ stream_stop_btn.onclick = () => {
     toast();
   }
 };
+
 
